@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e9f7ff;
+
+    display: grid;
+    grid-template-areas:
+        "topo topo"
+        "conteudo lado"
+        "rodape rodape";
+    grid-template-columns: 2fr 1fr;
+}
+
+header {
+    grid-area: topo;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background: #ddd;
+    border-radius: 8px;
+}
+
+main {
+    grid-area: conteudo;
+}
+
+article {
+    background: #fff;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+article h2 {
+    text-align: center;
+}
+
+figure {
+    width: 250px;
+    margin: 20px auto;
+}
+
+img {
+    width: 100%;
+}
+
+aside {
+    grid-area: lado;
+    padding: 20px;
+}
+
+aside h3 {
+    text-align: center;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    grid-area: rodape;
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "topo"
+            "conteudo"
+            "lado"
+            "rodape";
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
