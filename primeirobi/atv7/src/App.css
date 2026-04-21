@@ -1,0 +1,133 @@
+:root {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e9f7ff !important;
+  color: #333;
+  min-height: 100vh;
+}
+
+#root {
+  display: grid;
+  grid-template-areas:
+    "topo topo"
+    "conteudo lado"
+    "rodape rodape";
+  grid-template-columns: 2fr 1fr;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: topo;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: #ddd;
+  border-radius: 8px;
+}
+
+main {
+  grid-area: conteudo;
+  display: block;
+}
+
+article {
+  background: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+article h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+article time {
+  display: block;
+  text-align: center;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+figure {
+  width: 250px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+aside {
+  grid-area: lado;
+  padding: 20px;
+}
+
+aside h3 {
+  text-align: center;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside a {
+  text-decoration: none;
+  color: #000000;
+}
+
+footer {
+  grid-area: rodape;
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 15px;
+  margin-top: auto;
+}
